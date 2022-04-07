@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 import 'package:login/widgets/back_button.dart';
+import '../main.dart';
 import './Menu1.dart';
 import 'dart:ui' as ui;
 import 'package:adobe_xd/page_link.dart';
@@ -58,7 +59,7 @@ class Menu2 extends StatelessWidget {
                             child: Image.asset(
                               "assets/images/image8.jpg",
                               width: 230.0,
-                              height: 370.0,
+                              height: sizeConfig!.height(0.44),
                               fit: BoxFit.fill,
 
                               //fit: BoxFit.cover,
@@ -66,7 +67,8 @@ class Menu2 extends StatelessWidget {
                           ),
                         ),
                         Padding(
-                            padding: const EdgeInsets.only(top: 320),
+                            padding:
+                                EdgeInsets.only(top: sizeConfig!.height(0.40)),
                             child: ClipRect(
                               child: BackdropFilter(
                                 filter: ui.ImageFilter.blur(
@@ -210,7 +212,8 @@ class Menu2 extends StatelessWidget {
                                               ],
                                               child: Container(
                                                 width: 160,
-                                                height: 50,
+                                                height:
+                                                    sizeConfig!.height(0.06),
                                                 decoration: BoxDecoration(
                                                   borderRadius:
                                                       BorderRadius.circular(

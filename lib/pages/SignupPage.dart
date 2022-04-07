@@ -182,7 +182,7 @@ class _SignupPageState extends State<SignupPage> {
                                     ]),
 
                                     prefixIcon: Icon(
-                                      Icons.person,
+                                      Icons.phone,
                                       color: Colors.black,
                                     ),
                                     hintText: "Phone",
@@ -215,7 +215,7 @@ class _SignupPageState extends State<SignupPage> {
                                               'passwords must have at least one special character')
                                     ]),
                                     prefixIcon: Icon(
-                                      Icons.person,
+                                      Icons.password_outlined,
                                       color: Colors.black,
                                     ),
                                     hintText: "Password",
@@ -244,7 +244,7 @@ class _SignupPageState extends State<SignupPage> {
                                           errorText: 'Enter Valid Email')
                                     ]),
                                     prefixIcon: Icon(
-                                      Icons.person,
+                                      Icons.email_outlined,
                                       color: Colors.black,
                                     ),
                                     hintText: "Email",

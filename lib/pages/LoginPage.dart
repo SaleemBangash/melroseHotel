@@ -6,6 +6,7 @@ import 'package:adobe_xd/page_link.dart';
 //import './SignupPage.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:form_field_validator/form_field_validator.dart';
+import 'package:login/main.dart';
 import 'package:login/pages/PopupScreen.dart';
 import 'package:login/pages/RoomBooking.dart';
 import 'package:login/pages/SignupPage.dart';
@@ -28,12 +29,13 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
-    double height = MediaQuery.of(context).size.height;
-    double width = MediaQuery.of(context).size.width;
-    double text = MediaQuery.textScaleFactorOf(context);
+    // double height = MediaQuery.of(context).size.height;
+    // double width = MediaQuery.of(context).size.width;
+    // double text = MediaQuery.textScaleFactorOf(context);
     return Stack(
       children: [
         Container(
+          height: sizeConfig!.height(1.0),
           decoration: BoxDecoration(
               image: DecorationImage(
             image: AssetImage("assets/images/pic6.jpeg"),
@@ -89,7 +91,7 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                     ),
                     SizedBox(
-                      height: 30,
+                      height: sizeConfig!.height(.03),
                     ),
                     Center(
                       child: Text(
@@ -104,7 +106,7 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                     ),
                     SizedBox(
-                      height: 20,
+                      height: sizeConfig!.height(.03),
                     ),
                     Form(
                       key: formkey,
@@ -249,7 +251,7 @@ class _LoginPageState extends State<LoginPage> {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (_) => SignupPage()));
+                                        builder: (_) => RoomBooking()));
                                 print("Validated");
                               } else {
                                 print("Not Validated");

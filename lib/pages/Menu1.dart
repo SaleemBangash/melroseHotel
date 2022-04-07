@@ -1,6 +1,7 @@
 // ignore_for_file: file_names, prefer_const_constructors, prefer_const_literals_to_create_immutables
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
+import 'package:login/main.dart';
 import 'package:login/widgets/back_button.dart';
 import './Menu2.dart';
 import 'package:adobe_xd/page_link.dart';
@@ -18,7 +19,7 @@ class Menu1 extends StatelessWidget {
     return Scaffold(
       backgroundColor: Theme.of(context).primaryColor,
       body: Container(
-        margin: EdgeInsets.only(top: 20),
+        margin: EdgeInsets.only(top: sizeConfig!.height(0.01)),
         child: ListView(
           children: [
             Column(
@@ -50,7 +51,7 @@ class Menu1 extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(left: 30, top: 50),
+                  padding: const EdgeInsets.only(left: 30, top: 40),
                   child: Text(
                     'Hi, James!',
                     style: Theme.of(context).textTheme.headline5,
@@ -85,7 +86,7 @@ class Menu1 extends StatelessWidget {
                           decoration: BoxDecoration(
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(16)),
-                          height: 50,
+                          height: sizeConfig!.height(0.06),
                           child: TextFormField(
                             keyboardType: TextInputType.text,
                             decoration: InputDecoration(
@@ -117,7 +118,7 @@ class Menu1 extends StatelessWidget {
                             children: [
                               Container(
                                   width: 60,
-                                  height: 60,
+                                  height: sizeConfig!.height(0.08),
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(16.0),
                                     border: Border.all(width: 1),
@@ -156,7 +157,7 @@ class Menu1 extends StatelessWidget {
                             children: [
                               Container(
                                   width: 60,
-                                  height: 60,
+                                  height: sizeConfig!.height(0.08),
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(16.0),
                                     border: Border.all(width: 1),
@@ -195,7 +196,7 @@ class Menu1 extends StatelessWidget {
                             children: [
                               Container(
                                   width: 60,
-                                  height: 60,
+                                  height: sizeConfig!.height(0.08),
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(16.0),
                                     border: Border.all(width: 1),
@@ -234,7 +235,7 @@ class Menu1 extends StatelessWidget {
                             children: [
                               Container(
                                   width: 60,
-                                  height: 60,
+                                  height: sizeConfig!.height(0.08),
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(16.0),
                                     border: Border.all(width: 1),
@@ -275,7 +276,7 @@ class Menu1 extends StatelessWidget {
                               children: [
                                 Container(
                                     width: 60,
-                                    height: 60,
+                                    height: sizeConfig!.height(0.08),
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(16.0),
                                       border: Border.all(width: 1),
@@ -317,7 +318,7 @@ class Menu1 extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 40, left: 20),
+                  padding: const EdgeInsets.only(top: 30, left: 20),
                   child: Text(
                     'Special ',
                     style: Theme.of(context).textTheme.headline5,
@@ -325,7 +326,7 @@ class Menu1 extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 40, left: 10),
+                  padding: const EdgeInsets.only(top: 30, left: 10),
                   child: Column(
                     children: [
                       Padding(
@@ -346,7 +347,7 @@ class Menu1 extends StatelessWidget {
                                 child: Image.asset(
                                   "assets/images/image8.jpg",
                                   width: 150.0,
-                                  height: 210.0,
+                                  height: sizeConfig!.height(0.28),
                                   fit: BoxFit.fill,
                                   //fit: BoxFit.cover,
                                 ),
@@ -359,7 +360,7 @@ class Menu1 extends StatelessWidget {
                                 child: Image.asset(
                                   "assets/images/image9.jpg",
                                   width: 150.0,
-                                  height: 210.0,
+                                  height: sizeConfig!.height(0.28),
                                   fit: BoxFit.fill,
                                   //fit: BoxFit.cover,
                                 ),

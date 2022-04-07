@@ -30,383 +30,440 @@ class _RoomBooking2State extends State<RoomBooking2> {
     return Scaffold(
       //backgroundColor: Colors.transparent,
       backgroundColor: Theme.of(context).primaryColor,
-      body: ListView(
-        children: <Widget>[
-          Column(
-            children: <Widget>[
-              Padding(
-                  padding: const EdgeInsets.only(right: 310, top: 10),
-                  child: NewButton(
-                    onPressed: () => Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => RoomBooking())),
-                  )),
-              Padding(
-                padding: const EdgeInsets.all(0.0),
-                child: Container(
-                  decoration: BoxDecoration(
-                    color: const Color(0xffb5cedf),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(top: 50, left: 40, right: 40),
-                child: Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(right: 200),
-                      child: Text(
-                        'Is The Party ',
-                        style: Theme.of(context).textTheme.bodyText1!.copyWith(
-                              fontWeight: FontWeight.w600,
-                              color: Colors.black,
-                            ),
-                        textAlign: TextAlign.left,
-                      ),
-                    ),
-                    Row(
-                      // mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Checkbox(
-                          value: wasChecked,
-                          onChanged: (bool? value) {
-                            setState(() {
-                              wasChecked = value!;
-                              hasChecked = false;
-                              // onChecked = false;
-                            });
-                          },
-                        ),
-                        Text(
-                          'UK National',
-                          style: TextStyle(
-                            fontSize: 17.0,
-                            color: Colors.black,
-                          ),
-                        ),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        Checkbox(
-                          value: hasChecked,
-                          onChanged: (bool? PriceUpdateValue) {
-                            setState(() {
-                              //isChecked = value!;
-                              hasChecked = PriceUpdateValue ?? true;
-                              wasChecked = false;
-                            });
-                          },
-                        ),
-                        Text(
-                          'Other National',
-                          style: TextStyle(
-                            fontSize: 17.0,
-                            color: Colors.black,
-                          ),
-                        ),
-                      ],
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(top: 10, left: 10, right: 10),
-                      child: Visibility(
-                        visible: hasChecked,
-                        // maintainAnimation: true,
-                        // maintainSize: true,
-                        // maintainState: true,
-                        child: Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(25.0),
-                            border: Border.all(width: 1, color: Colors.black),
-                            color: Theme.of(context).primaryColor,
-                          ),
-                          // margin:
-                          //     EdgeInsets.only(bottom: sizeConfig!.height(.04)),
-                          child: MyTextField(
-                            inputType: TextInputType.visiblePassword,
-
-                            // onValidate: (value) => MultiValidator([
-                            //   RequiredValidator(errorText: "* Required"),
-                            //   MinLengthValidator(6,
-                            //       errorText:
-                            //           "Password should be atleast 6 characters"),
-                            //   MaxLengthValidator(15,
-                            //       errorText:
-                            //           "Password should not be greater than 15 characters")
-                            // ]),
-                            // validator: MultiValidator([
-                            //   RequiredValidator(errorText: "* Required"),
-                            //   MinLengthValidator(6,
-                            //       errorText:
-                            //           "Password should be atleast 6 characters"),
-                            //   MaxLengthValidator(15,
-                            //       errorText:
-                            //           "Password should not be greater than 15 characters")
-                            // ]),
-                            prefixIcon: Icon(
-                              Icons.bookmarks_outlined,
-                              color: Colors.black,
-                            ),
-                            hintText: "Nationality",
-                            filled: true,
-
-                            // obsecureText: true,
-                          ),
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(top: 10, left: 10, right: 10),
-                      child: Visibility(
-                        //  maintainAnimation: true,
-                        // maintainSize: true,
-                        // maintainState: true,
-                        visible: hasChecked,
-                        child: Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(25.0),
-                            border: Border.all(width: 1, color: Colors.black),
-                            color: Theme.of(context).primaryColor,
-                          ),
-                          child: TextField(
-                            style: TextStyle(color: Colors.black),
-                            decoration: InputDecoration(
-                              prefixIcon:
-                                  Icon(Icons.book_online, color: Colors.black),
-                              border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(25.0)),
-                              labelStyle: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold),
-                              hintText: "Passport",
-                              hintStyle: TextStyle(color: Colors.black),
-                              //labelText: "First Name"
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    // Padding(
-                    //   padding: EdgeInsets.only(top: 490, left: 154),
-                    //   child: PageLink(
-                    //     links: [
-                    //       PageLinkInfo(
-                    //         transition: LinkTransition.Fade,
-                    //         ease: Curves.easeOut,
-                    //         duration: 0.3,
-                    //         pageBuilder: () => LoginPage(),
-                    //       ),
-                    //     ],
-                    //     child: Container(
-                    //       decoration: BoxDecoration(
-                    //         borderRadius: BorderRadius.circular(25.0),
-                    //         color: Colors.black,
-                    //       ),
-                    //     ),
-                    //   ),
-                    // ),
-                    // Padding(
-                    //   padding: EdgeInsets.only(top: 10, left: 10, right: 10),
-                    //   // child: Container(
-                    //   //   decoration: BoxDecoration(
-                    //   //     borderRadius: BorderRadius.circular(25.0),
-                    //   //     color: Colors.black,
-                    //   //   ),
-                    //   //   child: TextField(
-                    //   //     style: TextStyle(color: Colors.white),
-                    //   //     decoration: InputDecoration(
-                    //   //       prefixIcon: Icon(Icons.bookmarks_outlined,
-                    //   //           color: Colors.white),
-                    //   //       border: OutlineInputBorder(
-                    //   //           borderRadius: BorderRadius.circular(25.0)),
-                    //   //       labelStyle: TextStyle(
-                    //   //           color: Colors.white,
-                    //   //           fontSize: 20,
-                    //   //           fontWeight: FontWeight.bold),
-                    //   //       hintText: "Nationality",
-                    //   //       hintStyle: TextStyle(color: Colors.white),
-                    //   //       //labelText: "First Name"
-                    //   //     ),
-                    //   //   ),
-                    //   // ),
-                    // ),
-                    Padding(
-                      padding: EdgeInsets.only(top: 10, left: 10, right: 10),
-                      child: Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(25.0),
-                          border: Border.all(width: 1, color: Colors.black),
-                          color: Theme.of(context).primaryColor,
-                        ),
-                        child: TextField(
-                          style: TextStyle(color: Colors.black),
-                          decoration: InputDecoration(
-                            prefixIcon: Icon(
-                              Icons.note_add,
-                              color: Colors.black,
-                            ),
-                            border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(25.0)),
-                            labelStyle: TextStyle(
-                                color: Colors.black,
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold),
-                            hintText: "Driving Liscence",
-                            hintStyle: TextStyle(color: Colors.black),
-                            //labelText: "First Name"
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(
-                  top: 20,
-                ),
-                child: Text(
-                  'Confirm the person who is going to\nreserve the room',
-                  style: TextStyle(
-                    fontFamily: 'Segoe UI',
-                    fontSize: 15,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black,
-                  ),
-                  textAlign: TextAlign.left,
-                ),
-              ),
-              Column(
-                children: [
-                  Padding(
-                    padding: EdgeInsets.only(top: 10, left: 60),
-                    child: Row(
-                      // mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Checkbox(
-                          value: isChecked,
-                          onChanged: (bool? value) {
-                            setState(() {
-                              isChecked = value!;
-                              onChecked = false;
-                              // onChecked = false;
-                            });
-                          },
-                        ),
-                        Text(
-                          'Local',
-                          style: TextStyle(
-                            fontSize: 17.0,
-                            color: Colors.black,
-                          ),
-                        ),
-                      ],
+      body: Container(
+        child: ListView(
+          children: <Widget>[
+            Column(
+              children: <Widget>[
+                Padding(
+                    padding: const EdgeInsets.only(right: 310, top: 10),
+                    child: NewButton(
+                      onPressed: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => RoomBooking())),
+                    )),
+                Padding(
+                  padding: const EdgeInsets.all(0.0),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: const Color(0xffb5cedf),
                     ),
                   ),
-                  Padding(
-                    padding: EdgeInsets.only(left: 60),
-
-                    child: Row(
-                      children: [
-                        Checkbox(
-                          value: onChecked,
-                          onChanged: (bool? value) {
-                            setState(() {
-                              //isChecked = value!;
-                              onChecked = value!;
-                              isChecked = false;
-                            });
-                          },
-                        ),
-                        Text(
-                          'Outsider',
-                          style: TextStyle(
-                            fontSize: 17.0,
-                            color: Colors.black,
-                          ),
-                        ),
-                      ],
-                    ),
-
-                    // Text(
-                    //   'Forget Password',
-                    //   style: TextStyle(
-                    //     fontFamily: 'Segoe UI',
-                    //     fontSize: 18,
-                    //     color: const Color(0xff668079),
-                    //     letterSpacing: -0.27,
-                    //   ),
-                    //   textAlign: TextAlign.left,
-                    // ),
-                  ),
-                ],
-              ),
-              Padding(
-                  padding: EdgeInsets.only(top: 10, left: 14),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(top: 20),
                   child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Padding(
-                        padding: const EdgeInsets.only(right: 80, bottom: 10),
+                        padding: const EdgeInsets.only(left: 40),
                         child: Text(
-                          'Payment Method',
+                          'Is The Party ',
                           style:
-                              Theme.of(context).textTheme.headline6!.copyWith(
+                              Theme.of(context).textTheme.bodyText1!.copyWith(
                                     fontWeight: FontWeight.w600,
                                     color: Colors.black,
                                   ),
                           textAlign: TextAlign.left,
                         ),
                       ),
-                      PageLink(
-                        links: [
-                          PageLinkInfo(
-                            transition: LinkTransition.Fade,
-                            ease: Curves.easeOut,
-                            duration: 0.3,
-                            pageBuilder: () => RoomBooking(),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 40),
+                        child: Row(
+                          // mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Checkbox(
+                              value: wasChecked,
+                              onChanged: (bool? value) {
+                                setState(() {
+                                  wasChecked = value!;
+                                  hasChecked = false;
+                                  // onChecked = false;
+                                });
+                              },
+                            ),
+                            Text(
+                              'UK National',
+                              style: TextStyle(
+                                fontSize: 17.0,
+                                color: Colors.black,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 40),
+                        child: Row(
+                          children: [
+                            Checkbox(
+                              value: hasChecked,
+                              onChanged: (bool? PriceUpdateValue) {
+                                setState(() {
+                                  //isChecked = value!;
+                                  hasChecked = PriceUpdateValue ?? true;
+                                  wasChecked = false;
+                                });
+                              },
+                            ),
+                            Text(
+                              'Other National',
+                              style: TextStyle(
+                                fontSize: 17.0,
+                                color: Colors.black,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Center(
+                        child: Padding(
+                          padding: EdgeInsets.only(
+                            top: 10,
                           ),
-                        ],
-                        child: Container(
-                          width: 260,
-                          height: 50,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(25.0),
-                            color: const Color(0xffA67B5B),
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.only(),
-                            child: Center(
-                              child: Text(
-                                'Paypal, Credit/Debit Card',
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .bodyText2!
-                                    .copyWith(
-                                        fontWeight: FontWeight.w600,
-                                        color: Colors.black),
-                                // textAlign: TextAlign.left,
+                          child: Visibility(
+                            visible: hasChecked,
+                            // maintainAnimation: true,
+                            // maintainSize: true,
+                            // maintainState: true,
+                            child: SizedBox(
+                              width: 290,
+
+                              // margin:
+                              //     EdgeInsets.only(bottom: sizeConfig!.height(.04)),
+                              child: MyTextField(
+                                inputType: TextInputType.text,
+                                contentPadding: EdgeInsets.symmetric(
+                                    vertical: 10, horizontal: 15),
+
+                                // onValidate: (value) => MultiValidator([
+                                //   RequiredValidator(errorText: "* Required"),
+                                //   MinLengthValidator(6,
+                                //       errorText:
+                                //           "Password should be atleast 6 characters"),
+                                //   MaxLengthValidator(15,
+                                //       errorText:
+                                //           "Password should not be greater than 15 characters")
+                                // ]),
+                                // validator: MultiValidator([
+                                //   RequiredValidator(errorText: "* Required"),
+                                //   MinLengthValidator(6,
+                                //       errorText:
+                                //           "Password should be atleast 6 characters"),
+                                //   MaxLengthValidator(15,
+                                //       errorText:
+                                //           "Password should not be greater than 15 characters")
+                                // ]),
+                                prefixIcon: Icon(
+                                  Icons.bookmarks_outlined,
+                                  color: Colors.black,
+                                ),
+                                hintText: "Nationality",
+                                filled: true,
+
+                                // obsecureText: true,
                               ),
                             ),
                           ),
                         ),
                       ),
+                      Center(
+                        child: Padding(
+                          padding: EdgeInsets.only(
+                            top: 10,
+                          ),
+                          child: Visibility(
+                            //  maintainAnimation: true,
+                            // maintainSize: true,
+                            // maintainState: true,
+                            visible: hasChecked,
+                            child: SizedBox(
+                              width: 290,
+
+                              // margin:
+                              //     EdgeInsets.only(bottom: sizeConfig!.height(.04)),
+                              child: MyTextField(
+                                inputType: TextInputType.text,
+                                contentPadding: EdgeInsets.symmetric(
+                                    vertical: 10, horizontal: 15),
+
+                                // onValidate: (value) => MultiValidator([
+                                //   RequiredValidator(errorText: "* Required"),
+                                //   MinLengthValidator(6,
+                                //       errorText:
+                                //           "Password should be atleast 6 characters"),
+                                //   MaxLengthValidator(15,
+                                //       errorText:
+                                //           "Password should not be greater than 15 characters")
+                                // ]),
+                                // validator: MultiValidator([
+                                //   RequiredValidator(errorText: "* Required"),
+                                //   MinLengthValidator(6,
+                                //       errorText:
+                                //           "Password should be atleast 6 characters"),
+                                //   MaxLengthValidator(15,
+                                //       errorText:
+                                //           "Password should not be greater than 15 characters")
+                                // ]),
+                                prefixIcon: Icon(
+                                  Icons.book_outlined,
+                                  color: Colors.black,
+                                ),
+                                hintText: "Passport",
+                                filled: true,
+
+                                // obsecureText: true,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      // Padding(
+                      //   padding: EdgeInsets.only(top: 490, left: 154),
+                      //   child: PageLink(
+                      //     links: [
+                      //       PageLinkInfo(
+                      //         transition: LinkTransition.Fade,
+                      //         ease: Curves.easeOut,
+                      //         duration: 0.3,
+                      //         pageBuilder: () => LoginPage(),
+                      //       ),
+                      //     ],
+                      //     child: Container(
+                      //       decoration: BoxDecoration(
+                      //         borderRadius: BorderRadius.circular(25.0),
+                      //         color: Colors.black,
+                      //       ),
+                      //     ),
+                      //   ),
+                      // ),
+                      // Padding(
+                      //   padding: EdgeInsets.only(top: 10, left: 10, right: 10),
+                      //   // child: Container(
+                      //   //   decoration: BoxDecoration(
+                      //   //     borderRadius: BorderRadius.circular(25.0),
+                      //   //     color: Colors.black,
+                      //   //   ),
+                      //   //   child: TextField(
+                      //   //     style: TextStyle(color: Colors.white),
+                      //   //     decoration: InputDecoration(
+                      //   //       prefixIcon: Icon(Icons.bookmarks_outlined,
+                      //   //           color: Colors.white),
+                      //   //       border: OutlineInputBorder(
+                      //   //           borderRadius: BorderRadius.circular(25.0)),
+                      //   //       labelStyle: TextStyle(
+                      //   //           color: Colors.white,
+                      //   //           fontSize: 20,
+                      //   //           fontWeight: FontWeight.bold),
+                      //   //       hintText: "Nationality",
+                      //   //       hintStyle: TextStyle(color: Colors.white),
+                      //   //       //labelText: "First Name"
+                      //   //     ),
+                      //   //   ),
+                      //   // ),
+                      // ),
+                      Center(
+                        child: Padding(
+                          padding: EdgeInsets.only(
+                            top: 10,
+                          ),
+                          child: SizedBox(
+                            width: 290,
+
+                            // margin:
+                            //     EdgeInsets.only(bottom: sizeConfig!.height(.04)),
+                            child: MyTextField(
+                              inputType: TextInputType.text,
+                              contentPadding: EdgeInsets.symmetric(
+                                  vertical: 10, horizontal: 15),
+
+                              // onValidate: (value) => MultiValidator([
+                              //   RequiredValidator(errorText: "* Required"),
+                              //   MinLengthValidator(6,
+                              //       errorText:
+                              //           "Password should be atleast 6 characters"),
+                              //   MaxLengthValidator(15,
+                              //       errorText:
+                              //           "Password should not be greater than 15 characters")
+                              // ]),
+                              // validator: MultiValidator([
+                              //   RequiredValidator(errorText: "* Required"),
+                              //   MinLengthValidator(6,
+                              //       errorText:
+                              //           "Password should be atleast 6 characters"),
+                              //   MaxLengthValidator(15,
+                              //       errorText:
+                              //           "Password should not be greater than 15 characters")
+                              // ]),
+                              prefixIcon: Icon(
+                                Icons.note_add,
+                                color: Colors.black,
+                              ),
+                              hintText: "Driving Liscense",
+                              filled: true,
+
+                              // obsecureText: true,
+                            ),
+                          ),
+                        ),
+                      ),
                     ],
-                  )),
-              Padding(
-                  padding: EdgeInsets.only(left: 20, top: 20),
-                  child: Container(
-                    margin: EdgeInsets.symmetric(vertical: 10),
-                    height: 30,
-                    width: 150,
-                    child: MyButton(
-                      title: "Submit",
-                      onPressed: () => Navigator.push(context,
-                          MaterialPageRoute(builder: (_) => QuickServices())),
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(
+                    top: 20,
+                  ),
+                  child: Text(
+                    'Confirm the person who is going to\nreserve the room',
+                    style: TextStyle(
+                      fontFamily: 'Segoe UI',
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black,
                     ),
-                  )),
-            ],
-          ),
-        ],
+                    textAlign: TextAlign.left,
+                  ),
+                ),
+                Column(
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.only(top: 10, left: 60),
+                      child: Row(
+                        // mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Checkbox(
+                            value: isChecked,
+                            onChanged: (bool? value) {
+                              setState(() {
+                                isChecked = value!;
+                                onChecked = false;
+                                // onChecked = false;
+                              });
+                            },
+                          ),
+                          Text(
+                            'Local',
+                            style: TextStyle(
+                              fontSize: 17.0,
+                              color: Colors.black,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(left: 60),
+
+                      child: Row(
+                        children: [
+                          Checkbox(
+                            value: onChecked,
+                            onChanged: (bool? value) {
+                              setState(() {
+                                //isChecked = value!;
+                                onChecked = value!;
+                                isChecked = false;
+                              });
+                            },
+                          ),
+                          Text(
+                            'Outsider',
+                            style: TextStyle(
+                              fontSize: 17.0,
+                              color: Colors.black,
+                            ),
+                          ),
+                        ],
+                      ),
+
+                      // Text(
+                      //   'Forget Password',
+                      //   style: TextStyle(
+                      //     fontFamily: 'Segoe UI',
+                      //     fontSize: 18,
+                      //     color: const Color(0xff668079),
+                      //     letterSpacing: -0.27,
+                      //   ),
+                      //   textAlign: TextAlign.left,
+                      // ),
+                    ),
+                  ],
+                ),
+                Padding(
+                    padding: EdgeInsets.only(top: 10, left: 14),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(),
+                          child: Text(
+                            'Payment Method',
+                            style:
+                                Theme.of(context).textTheme.headline6!.copyWith(
+                                      fontWeight: FontWeight.w600,
+                                      color: Colors.black,
+                                    ),
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        PageLink(
+                          links: [
+                            PageLinkInfo(
+                              transition: LinkTransition.Fade,
+                              ease: Curves.easeOut,
+                              duration: 0.3,
+                              pageBuilder: () => RoomBooking(),
+                            ),
+                          ],
+                          child: Container(
+                            width: 260,
+                            height: 50,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(25.0),
+                              color: const Color(0xffA67B5B),
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.only(),
+                              child: Center(
+                                child: Text(
+                                  'Paypal, Credit/Debit Card',
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .bodyText2!
+                                      .copyWith(
+                                          fontWeight: FontWeight.w600,
+                                          color: Colors.black),
+                                  // textAlign: TextAlign.left,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    )),
+                Padding(
+                    padding: EdgeInsets.only(left: 20, top: 20),
+                    child: Container(
+                      margin: EdgeInsets.symmetric(vertical: 10),
+                      height: 30,
+                      width: 150,
+                      child: MyButton(
+                        title: "Submit",
+                        onPressed: () => Navigator.push(context,
+                            MaterialPageRoute(builder: (_) => QuickServices())),
+                      ),
+                    )),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }

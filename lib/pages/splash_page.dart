@@ -40,33 +40,51 @@ class _SplashScreenState extends State<SplashPage> {
   _body() => Stack(
         children: [
           SplashImage(),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            // mainAxisSize: MainAxisSize.min,
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(),
-                child: Container(
-                  height: 100,
-                  width: 300,
-                  decoration: const BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage("assets/images/logoo.png"))),
-                ),
-              ),
-              Center(
-                child: Padding(
+          Padding(
+            padding: const EdgeInsets.only(top: 110),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              // mainAxisSize: MainAxisSize.min,
+              children: [
+                Padding(
                   padding: const EdgeInsets.only(),
-                  child: Text("Melrose Hotel",
-                      style: Theme.of(context).textTheme.headline1!.copyWith(
-                            color: Colors.black,
-                            fontSize: 30,
-                            fontWeight: FontWeight.bold,
-                          )),
+                  child: Container(
+                    height: 100,
+                    width: 300,
+                    decoration: const BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage("assets/images/logooo.png"))),
+                  ),
                 ),
-              )
-            ],
+                Padding(
+                  padding: const EdgeInsets.only(top: 150),
+                  child: Column(
+                    // mainAxisAlignment: MainAxisAlignment.center,
+                    // crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Text("Welcome",
+                          style:
+                              Theme.of(context).textTheme.headline1!.copyWith(
+                                    color: Colors.black,
+                                    fontSize: 30,
+                                    fontWeight: FontWeight.bold,
+                                  )),
+                      Center(
+                        child: Text(
+                            "         The \nMelrose Hotel\nAt The Beach",
+                            style:
+                                Theme.of(context).textTheme.headline1!.copyWith(
+                                      color: Colors.black,
+                                      fontSize: 30,
+                                      fontWeight: FontWeight.bold,
+                                    )),
+                      ),
+                    ],
+                  ),
+                )
+              ],
+            ),
           ),
         ],
       );

@@ -1,5 +1,6 @@
 // ignore_for_file: file_names, prefer_const_constructors, deprecated_member_use, prefer_const_literals_to_create_immutables
 import 'package:flutter/material.dart';
+import 'package:login/main.dart';
 // import 'package:adobe_xd/pinned.dart';
 // import 'package:login/pages/Menu2.dart';
 // import 'package:login/main.dart';
@@ -38,190 +39,211 @@ class _QuickServicesState extends State<QuickServices> {
         backgroundColor: Theme.of(context).primaryColor,
         body: Container(
           // height: sizeConfig!.height(.9),
-          child: Padding(
-            padding: const EdgeInsets.only(top: 20),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
+          child: Container(
+            child: ListView(
+              children: [
                 Padding(
-                  padding: const EdgeInsets.only(
-                    top: 20,
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
+                  padding: const EdgeInsets.only(top: 10),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
                       Padding(
-                          padding: const EdgeInsets.only(left: 20),
-                          child: NewButton(
-                            onPressed: () => Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => Dashboard())),
-                          )),
-                      Padding(
-                        padding: const EdgeInsets.only(right: 20),
-                        child: Icon(Icons.search),
-                      ),
-                    ],
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsets.only(left: 50, top: 20),
-                  child: Text(
-                    'Quick\nServices',
-                    style: Theme.of(context).textTheme.headline1,
-                    textAlign: TextAlign.left,
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 20),
-                  child: Container(
-                    width: 410,
-                    height: 290,
-                    child: Image.asset("assets/images/image7.jpg"),
-                  ),
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-                Padding(
-                  padding: EdgeInsets.only(left: 50),
-                  child: Text(
-                    'Select your Service:',
-                    style: TextStyle(
-                        fontFamily: 'Segoe UI',
-                        fontSize: 15,
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold),
-                    textAlign: TextAlign.left,
-                  ),
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 40),
-                  child: Center(
-                    child: Column(
-                      children: [
-                        Row(
+                        padding: const EdgeInsets.only(
+                          top: 20,
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Column(
-                              children: [
-                                Container(
-                                    width: 80,
-                                    height: 80,
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(16.0),
-                                      border: Border.all(
-                                          color: Colors.black, width: 1),
-                                      color: Theme.of(context).primaryColor,
-                                    ),
-                                    child: Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: PageLink(
-                                        links: [
-                                          PageLinkInfo(
-                                            transition: LinkTransition.Fade,
-                                            ease: Curves.easeOut,
-                                            duration: 0.3,
-                                            pageBuilder: () => StaffHelp(),
-                                          ),
-                                        ],
-                                        child: Image.asset(
-                                            "assets/images/cleaning.png"),
-                                      ),
-                                    )),
-                                Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Text(
-                                    'Staff Help',
-                                    style:
-                                        Theme.of(context).textTheme.bodyText2,
-                                    textAlign: TextAlign.left,
-                                  ),
-                                ),
-                              ],
-                            ),
-                            Column(
-                              children: [
-                                Container(
-                                    width: 80,
-                                    height: 80,
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(16.0),
-                                      border: Border.all(
-                                          color: Colors.black, width: 1),
-                                      color: Theme.of(context).primaryColor,
-                                    ),
-                                    child: Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: PageLink(
-                                        links: [
-                                          PageLinkInfo(
-                                            transition: LinkTransition.Fade,
-                                            ease: Curves.easeOut,
-                                            duration: 0.3,
-                                            pageBuilder: () => Reservation(),
-                                          ),
-                                        ],
-                                        child: Image.asset(
-                                            "assets/images/drink.png"),
-                                      ),
-                                    )),
-                                Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Text(
-                                    'Refreshement',
-                                    style:
-                                        Theme.of(context).textTheme.bodyText2,
-                                    textAlign: TextAlign.left,
-                                  ),
-                                ),
-                              ],
-                            ),
-                            Column(
-                              children: [
-                                Container(
-                                    width: 80,
-                                    height: 80,
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(16.0),
-                                      border: Border.all(
-                                          color: Colors.black, width: 1),
-                                      color: Theme.of(context).primaryColor,
-                                    ),
-                                    child: Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: PageLink(
-                                        links: [
-                                          PageLinkInfo(
-                                            transition: LinkTransition.Fade,
-                                            ease: Curves.easeOut,
-                                            duration: 0.3,
-                                            pageBuilder: () => StaffHelp(),
-                                          ),
-                                        ],
-                                        child: Image.asset(
-                                            "assets/images/book.png"),
-                                      ),
-                                    )),
-                                Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Text(
-                                    'Books',
-                                    style:
-                                        Theme.of(context).textTheme.bodyText2,
-                                    textAlign: TextAlign.left,
-                                  ),
-                                ),
-                              ],
+                            Padding(
+                                padding: const EdgeInsets.only(left: 20),
+                                child: NewButton(
+                                  onPressed: () => Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => Dashboard())),
+                                )),
+                            Padding(
+                              padding: const EdgeInsets.only(right: 20),
+                              child: Icon(Icons.search),
                             ),
                           ],
                         ),
-                      ],
-                    ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(left: 50, top: 20),
+                        child: Text(
+                          'Quick\nServices',
+                          style: Theme.of(context).textTheme.headline1,
+                          textAlign: TextAlign.left,
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 20),
+                        child: Container(
+                          width: 410,
+                          height: sizeConfig!.height(0.38),
+                          child: Image.asset("assets/images/image7.jpg"),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(left: 50),
+                        child: Text(
+                          'Select your Service:',
+                          style: TextStyle(
+                              fontFamily: 'Segoe UI',
+                              fontSize: 15,
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold),
+                          textAlign: TextAlign.left,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 40),
+                        child: Center(
+                          child: Column(
+                            children: [
+                              Row(
+                                children: [
+                                  Column(
+                                    children: [
+                                      Container(
+                                          width: 80,
+                                          height: sizeConfig!.height(0.10),
+                                          decoration: BoxDecoration(
+                                            borderRadius:
+                                                BorderRadius.circular(16.0),
+                                            border: Border.all(
+                                                color: Colors.black, width: 1),
+                                            color:
+                                                Theme.of(context).primaryColor,
+                                          ),
+                                          child: Padding(
+                                            padding: const EdgeInsets.all(8.0),
+                                            child: PageLink(
+                                              links: [
+                                                PageLinkInfo(
+                                                  transition:
+                                                      LinkTransition.Fade,
+                                                  ease: Curves.easeOut,
+                                                  duration: 0.3,
+                                                  pageBuilder: () =>
+                                                      StaffHelp(),
+                                                ),
+                                              ],
+                                              child: Image.asset(
+                                                  "assets/images/cleaning.png"),
+                                            ),
+                                          )),
+                                      Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Text(
+                                          'Staff Help',
+                                          style: Theme.of(context)
+                                              .textTheme
+                                              .bodyText2,
+                                          textAlign: TextAlign.left,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  Column(
+                                    children: [
+                                      Container(
+                                          width: 80,
+                                          height: sizeConfig!.height(0.10),
+                                          decoration: BoxDecoration(
+                                            borderRadius:
+                                                BorderRadius.circular(16.0),
+                                            border: Border.all(
+                                                color: Colors.black, width: 1),
+                                            color:
+                                                Theme.of(context).primaryColor,
+                                          ),
+                                          child: Padding(
+                                            padding: const EdgeInsets.all(8.0),
+                                            child: PageLink(
+                                              links: [
+                                                PageLinkInfo(
+                                                  transition:
+                                                      LinkTransition.Fade,
+                                                  ease: Curves.easeOut,
+                                                  duration: 0.3,
+                                                  pageBuilder: () =>
+                                                      Reservation(),
+                                                ),
+                                              ],
+                                              child: Image.asset(
+                                                  "assets/images/drink.png"),
+                                            ),
+                                          )),
+                                      Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Text(
+                                          'Refreshement',
+                                          style: Theme.of(context)
+                                              .textTheme
+                                              .bodyText2,
+                                          textAlign: TextAlign.left,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  Column(
+                                    children: [
+                                      Container(
+                                          width: 80,
+                                          height: sizeConfig!.height(0.10),
+                                          decoration: BoxDecoration(
+                                            borderRadius:
+                                                BorderRadius.circular(16.0),
+                                            border: Border.all(
+                                                color: Colors.black, width: 1),
+                                            color:
+                                                Theme.of(context).primaryColor,
+                                          ),
+                                          child: Padding(
+                                            padding: const EdgeInsets.all(8.0),
+                                            child: PageLink(
+                                              links: [
+                                                PageLinkInfo(
+                                                  transition:
+                                                      LinkTransition.Fade,
+                                                  ease: Curves.easeOut,
+                                                  duration: 0.3,
+                                                  pageBuilder: () =>
+                                                      StaffHelp(),
+                                                ),
+                                              ],
+                                              child: Image.asset(
+                                                  "assets/images/book.png"),
+                                            ),
+                                          )),
+                                      Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Text(
+                                          'Books',
+                                          style: Theme.of(context)
+                                              .textTheme
+                                              .bodyText2,
+                                          textAlign: TextAlign.left,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ],
@@ -250,7 +272,7 @@ class _QuickServicesState extends State<QuickServices> {
                     );
                   },
                   child: Icon(Icons.home)),
-              title: Text('Dashboard'),
+              label: 'Dashboard',
               backgroundColor: Colors.white,
             ),
             BottomNavigationBarItem(
@@ -266,12 +288,7 @@ class _QuickServicesState extends State<QuickServices> {
                     color: Colors.black,
                   ),
                 ),
-                title: Text(
-                  'Service',
-                  style: TextStyle(
-                    color: Colors.black,
-                  ),
-                ),
+                label: ('Service'),
                 backgroundColor: Colors.white),
             BottomNavigationBarItem(
               icon: InkWell(
@@ -286,9 +303,7 @@ class _QuickServicesState extends State<QuickServices> {
                   color: Colors.black,
                 ),
               ),
-              title: Text(
-                'Message',
-              ),
+              label: ('Message'),
               backgroundColor: Colors.white,
             ),
             BottomNavigationBarItem(
@@ -304,9 +319,7 @@ class _QuickServicesState extends State<QuickServices> {
                   color: Colors.black,
                 ),
               ),
-              title: Text(
-                'Profile',
-              ),
+              label: ('Profile'),
               backgroundColor: Colors.white,
             ),
           ],

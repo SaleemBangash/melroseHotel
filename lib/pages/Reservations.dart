@@ -1,6 +1,7 @@
 // ignore_for_file: file_names, prefer_const_constructors, prefer_const_literals_to_create_immutables
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
+import 'package:login/main.dart';
 import 'package:login/pages/RideBooking.dart';
 import 'package:login/widgets/back_button.dart';
 import './Reservation.dart';
@@ -16,7 +17,7 @@ class Reservations extends StatelessWidget {
     return Scaffold(
       backgroundColor: Theme.of(context).primaryColor,
       body: Container(
-        margin: EdgeInsets.only(top: 20),
+        margin: EdgeInsets.only(top: sizeConfig!.height(0.03)),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -43,7 +44,7 @@ class Reservations extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 40),
+              padding: EdgeInsets.only(top: sizeConfig!.height(0.04)),
               child: Column(
                 children: [
                   Padding(
@@ -58,7 +59,7 @@ class Reservations extends StatelessWidget {
                               child: Image.asset(
                                 "assets/images/image14.jpg",
                                 width: 180.0,
-                                height: 130.0,
+                                height: sizeConfig!.height(0.16),
                                 fit: BoxFit.fill,
                               )),
                         ),
@@ -91,7 +92,7 @@ class Reservations extends StatelessWidget {
                               child: Image.asset(
                                 "assets/images/image15.jpg",
                                 width: 180.0,
-                                height: 130.0,
+                                height: sizeConfig!.height(0.16),
                                 fit: BoxFit.fill,
                               )),
                         ),
@@ -124,7 +125,7 @@ class Reservations extends StatelessWidget {
                               child: Image.asset(
                                 "assets/images/image16.jpg",
                                 width: 180.0,
-                                height: 130.0,
+                                height: sizeConfig!.height(0.16),
                                 fit: BoxFit.fill,
                               )),
                         ),

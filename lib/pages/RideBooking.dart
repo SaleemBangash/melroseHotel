@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 import 'package:login/widgets/back_button.dart';
+import '../main.dart';
 import './Reservation.dart';
 import 'package:adobe_xd/page_link.dart';
 import './RecreationalPlaces.dart';
@@ -80,7 +81,7 @@ class RideBooking extends StatelessWidget {
                         ],
                         child: Container(
                           width: 200,
-                          height: 50,
+                          height: sizeConfig!.height(0.06),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20.0),
                             border: Border.all(width: 1),
@@ -122,7 +123,7 @@ class RideBooking extends StatelessWidget {
                           ],
                           child: Container(
                             width: 200,
-                            height: 50,
+                            height: sizeConfig!.height(0.06),
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(25.0),
                               border: Border.all(width: 1),
@@ -165,7 +166,7 @@ class RideBooking extends StatelessWidget {
                           ],
                           child: Container(
                             width: 200,
-                            height: 50,
+                            height: sizeConfig!.height(0.06),
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(25.0),
                               border: Border.all(width: 1),
@@ -208,7 +209,7 @@ class RideBooking extends StatelessWidget {
                           ],
                           child: Container(
                             width: 200,
-                            height: 50,
+                            height: sizeConfig!.height(0.06),
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(25.0),
                               border: Border.all(width: 1),

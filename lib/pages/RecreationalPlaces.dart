@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 import 'package:login/pages/Reservation.dart';
 import 'package:login/widgets/back_button.dart';
+import '../main.dart';
 import './RideBooking.dart';
 import 'package:adobe_xd/page_link.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -32,9 +33,13 @@ class RecreationalPlaces extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(top: 20),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(top: 10, right: 170),
+                    padding: const EdgeInsets.only(
+                      left: 20,
+                      top: 10,
+                    ),
                     child: Text(
                       'Places to visit',
                       style: Theme.of(context)
@@ -72,7 +77,7 @@ class RecreationalPlaces extends StatelessWidget {
                         ),
                         child: Container(
                           width: 170,
-                          height: 170,
+                          height: sizeConfig!.height(0.21),
                           child: Column(
                             children: [
                               Image.asset("assets/images/image11.jpg"),
@@ -94,7 +99,7 @@ class RecreationalPlaces extends StatelessWidget {
                         padding: const EdgeInsets.only(left: 30, bottom: 50),
                         child: Container(
                           width: 90,
-                          height: 30,
+                          height: sizeConfig!.height(0.04),
                           decoration: BoxDecoration(
                               border: Border.all(width: 1),
                               color: Theme.of(context).primaryColor,
@@ -119,7 +124,7 @@ class RecreationalPlaces extends StatelessWidget {
                         ),
                         child: Container(
                           width: 170,
-                          height: 170,
+                          height: sizeConfig!.height(0.21),
                           child: Column(
                             children: [
                               Image.asset("assets/images/image12.jpg"),
@@ -141,7 +146,7 @@ class RecreationalPlaces extends StatelessWidget {
                         padding: const EdgeInsets.only(left: 30, bottom: 50),
                         child: Container(
                           width: 90,
-                          height: 30,
+                          height: sizeConfig!.height(0.04),
                           decoration: BoxDecoration(
                               border: Border.all(width: 1),
                               color: Theme.of(context).primaryColor,
@@ -166,7 +171,7 @@ class RecreationalPlaces extends StatelessWidget {
                         ),
                         child: Container(
                           width: 170,
-                          height: 170,
+                          height: sizeConfig!.height(0.21),
                           child: Column(
                             children: [
                               Image.asset("assets/images/image13.jpg"),
@@ -188,7 +193,7 @@ class RecreationalPlaces extends StatelessWidget {
                         padding: const EdgeInsets.only(left: 30, bottom: 50),
                         child: Container(
                           width: 90,
-                          height: 30,
+                          height: sizeConfig!.height(0.04),
                           decoration: BoxDecoration(
                               border: Border.all(width: 1),
                               color: Theme.of(context).primaryColor,

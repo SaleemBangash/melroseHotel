@@ -1,6 +1,7 @@
 // ignore_for_file: file_names, prefer_const_constructors, prefer_const_literals_to_create_immutables
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
+import 'package:login/main.dart';
 import 'package:login/pages/LoginPage.dart';
 import 'package:login/pages/QuickServices.dart';
 import 'package:login/widgets/back_button.dart';
@@ -18,161 +19,169 @@ class StaffHelp extends StatelessWidget {
     return Scaffold(
       backgroundColor: Theme.of(context).primaryColor,
       body: Container(
-        margin: EdgeInsets.only(top: 30),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
+        margin: EdgeInsets.only(top: 20),
+        child: ListView(
           children: [
-            Padding(
-                padding: const EdgeInsets.only(left: 20),
-                child: NewButton(
-                  onPressed: () => Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => QuickServices())),
-                )),
-            Padding(
-              padding: const EdgeInsets.only(top: 20),
-              child: Container(
-                width: 400,
-                height: 300,
-                child: Image.asset("assets/images/image1.jpg"),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 20),
-              child: Center(
-                child: Column(
-                  children: [
-                    Text(
-                      'Reception Staff Help',
-                      style: Theme.of(context).textTheme.headline1!.copyWith(
-                            color: Colors.black,
-                          ),
-                      textAlign: TextAlign.center,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 20),
-                      child: Text(
-                        'How Can We Help You?',
-                        style: Theme.of(context).textTheme.headline1!.copyWith(
-                              color: Colors.black,
-                            ),
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
-                  ],
+            Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                    padding: const EdgeInsets.only(left: 20),
+                    child: NewButton(
+                      onPressed: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => QuickServices())),
+                    )),
+                Padding(
+                  padding: const EdgeInsets.only(top: 20),
+                  child: Container(
+                    width: 400,
+                    height: sizeConfig!.height(0.35),
+                    child: Image.asset("assets/images/image1.jpg"),
+                  ),
                 ),
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.only(top: 10),
-              child: Center(
-                child: Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(12.0),
-                      child: PageLink(
-                        links: [
-                          PageLinkInfo(
-                            transition: LinkTransition.Fade,
-                            ease: Curves.easeOut,
-                            duration: 0.3,
-                            pageBuilder: () => Housekeeping(),
-                          ),
-                        ],
-                        child: Container(
-                          width: 260,
-                          height: 60,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20.0),
-                            border: Border.all(width: 1),
-                            color: Theme.of(context).primaryColor,
-                          ),
-                          child: Center(
-                            child: Text(
-                              'Hostel HouseKeeping',
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .headline2!
-                                  .copyWith(
+                Padding(
+                  padding: const EdgeInsets.only(top: 20),
+                  child: Center(
+                    child: Column(
+                      children: [
+                        Text(
+                          'Reception Staff Help',
+                          style:
+                              Theme.of(context).textTheme.headline1!.copyWith(
                                     color: Colors.black,
                                   ),
-                              textAlign: TextAlign.left,
-                            ),
+                          textAlign: TextAlign.center,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 20),
+                          child: Text(
+                            'How Can We Help You?',
+                            style:
+                                Theme.of(context).textTheme.headline1!.copyWith(
+                                      color: Colors.black,
+                                    ),
+                            textAlign: TextAlign.center,
                           ),
                         ),
-                      ),
+                      ],
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: PageLink(
-                        links: [
-                          PageLinkInfo(
-                            transition: LinkTransition.Fade,
-                            ease: Curves.easeOut,
-                            duration: 0.3,
-                            pageBuilder: () => LoginPage(),
-                          ),
-                        ],
-                        child: Container(
-                          width: 260,
-                          height: 60,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(25.0),
-                            border: Border.all(width: 1),
-                            color: Theme.of(context).primaryColor,
-                          ),
-                          child: Center(
-                            child: Text(
-                              'Room Service',
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .headline2!
-                                  .copyWith(
-                                    color: Colors.black,
-                                  ),
-                              textAlign: TextAlign.left,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: PageLink(
-                        links: [
-                          PageLinkInfo(
-                            transition: LinkTransition.Fade,
-                            ease: Curves.easeOut,
-                            duration: 0.3,
-                            pageBuilder: () => LoginPage(),
-                          ),
-                        ],
-                        child: Container(
-                          width: 260,
-                          height: 60,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(25.0),
-                            border: Border.all(width: 1),
-                            color: Theme.of(context).primaryColor,
-                          ),
-                          child: Center(
-                            child: Text(
-                              'Need Something Else?',
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .headline2!
-                                  .copyWith(
-                                    color: Colors.black,
-                                  ),
-                              textAlign: TextAlign.left,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
+                  ),
                 ),
-              ),
+                Padding(
+                  padding: EdgeInsets.only(top: 10),
+                  child: Center(
+                    child: Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(12.0),
+                          child: PageLink(
+                            links: [
+                              PageLinkInfo(
+                                transition: LinkTransition.Fade,
+                                ease: Curves.easeOut,
+                                duration: 0.3,
+                                pageBuilder: () => Housekeeping(),
+                              ),
+                            ],
+                            child: Container(
+                              width: 260,
+                              height: sizeConfig!.height(0.08),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20.0),
+                                border: Border.all(width: 1),
+                                color: Theme.of(context).primaryColor,
+                              ),
+                              child: Center(
+                                child: Text(
+                                  'Hostel HouseKeeping',
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .headline2!
+                                      .copyWith(
+                                        color: Colors.black,
+                                      ),
+                                  textAlign: TextAlign.left,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: PageLink(
+                            links: [
+                              PageLinkInfo(
+                                transition: LinkTransition.Fade,
+                                ease: Curves.easeOut,
+                                duration: 0.3,
+                                pageBuilder: () => LoginPage(),
+                              ),
+                            ],
+                            child: Container(
+                              width: 260,
+                              height: sizeConfig!.height(0.08),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(25.0),
+                                border: Border.all(width: 1),
+                                color: Theme.of(context).primaryColor,
+                              ),
+                              child: Center(
+                                child: Text(
+                                  'Room Service',
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .headline2!
+                                      .copyWith(
+                                        color: Colors.black,
+                                      ),
+                                  textAlign: TextAlign.left,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: PageLink(
+                            links: [
+                              PageLinkInfo(
+                                transition: LinkTransition.Fade,
+                                ease: Curves.easeOut,
+                                duration: 0.3,
+                                pageBuilder: () => LoginPage(),
+                              ),
+                            ],
+                            child: Container(
+                              width: sizeConfig!.width(.66),
+                              height: sizeConfig!.height(0.08),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(25.0),
+                                border: Border.all(width: 1),
+                                color: Theme.of(context).primaryColor,
+                              ),
+                              child: Center(
+                                child: Text(
+                                  'Need Something Else?',
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .headline2!
+                                      .copyWith(
+                                        color: Colors.black,
+                                      ),
+                                  textAlign: TextAlign.left,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
             ),
           ],
         ),

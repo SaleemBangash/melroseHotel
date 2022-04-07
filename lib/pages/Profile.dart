@@ -11,6 +11,8 @@ import 'package:adobe_xd/page_link.dart';
 
 import 'package:flutter_svg/flutter_svg.dart';
 
+import '../main.dart';
+
 class Profile extends StatelessWidget {
   Profile({
     Key? key,
@@ -38,7 +40,7 @@ class Profile extends StatelessWidget {
                   children: [
                     Container(
                       width: 140,
-                      height: 140,
+                      height: sizeConfig!.height(0.18),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(11.0),
                         // image: DecorationImage(
@@ -97,7 +99,7 @@ class Profile extends StatelessWidget {
                         ],
                         child: Container(
                           width: 200,
-                          height: 50,
+                          height: sizeConfig!.height(0.06),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20.0),
                             border: Border.all(width: 1),
@@ -131,7 +133,7 @@ class Profile extends StatelessWidget {
                         ],
                         child: Container(
                           width: 200,
-                          height: 50,
+                          height: sizeConfig!.height(0.06),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(25.0),
                             border: Border.all(width: 1),
@@ -165,7 +167,7 @@ class Profile extends StatelessWidget {
                         ],
                         child: Container(
                           width: 200,
-                          height: 50,
+                          height: sizeConfig!.height(0.06),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(25.0),
                             border: Border.all(width: 1),
