@@ -5,6 +5,7 @@ import 'package:login/main.dart';
 import 'package:login/pages/LoginPage.dart';
 import 'package:login/pages/QuickServices.dart';
 import 'package:login/widgets/back_button.dart';
+import '../widgets/bottom_bar.dart';
 import './Housekeeping.dart';
 import 'package:adobe_xd/page_link.dart';
 
@@ -29,10 +30,8 @@ class StaffHelp extends StatelessWidget {
                 Padding(
                     padding: const EdgeInsets.only(left: 20),
                     child: NewButton(
-                      onPressed: () => Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => QuickServices())),
+                      onPressed: () => Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => BottomBar())),
                     )),
                 Padding(
                   padding: const EdgeInsets.only(top: 20),
@@ -77,15 +76,14 @@ class StaffHelp extends StatelessWidget {
                       children: [
                         Padding(
                           padding: const EdgeInsets.all(12.0),
-                          child: PageLink(
-                            links: [
-                              PageLinkInfo(
-                                transition: LinkTransition.Fade,
-                                ease: Curves.easeOut,
-                                duration: 0.3,
-                                pageBuilder: () => Housekeeping(),
-                              ),
-                            ],
+                          child: GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => Housekeeping(),
+                                  ));
+                            },
                             child: Container(
                               width: 260,
                               height: sizeConfig!.height(0.08),
@@ -111,15 +109,14 @@ class StaffHelp extends StatelessWidget {
                         ),
                         Padding(
                           padding: const EdgeInsets.all(8.0),
-                          child: PageLink(
-                            links: [
-                              PageLinkInfo(
-                                transition: LinkTransition.Fade,
-                                ease: Curves.easeOut,
-                                duration: 0.3,
-                                pageBuilder: () => LoginPage(),
-                              ),
-                            ],
+                          child: GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => Housekeeping(),
+                                  ));
+                            },
                             child: Container(
                               width: 260,
                               height: sizeConfig!.height(0.08),
@@ -145,15 +142,14 @@ class StaffHelp extends StatelessWidget {
                         ),
                         Padding(
                           padding: const EdgeInsets.all(8.0),
-                          child: PageLink(
-                            links: [
-                              PageLinkInfo(
-                                transition: LinkTransition.Fade,
-                                ease: Curves.easeOut,
-                                duration: 0.3,
-                                pageBuilder: () => LoginPage(),
-                              ),
-                            ],
+                          child: GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => Housekeeping(),
+                                  ));
+                            },
                             child: Container(
                               width: sizeConfig!.width(.66),
                               height: sizeConfig!.height(0.08),

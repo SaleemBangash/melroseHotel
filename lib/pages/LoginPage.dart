@@ -262,15 +262,14 @@ class _LoginPageState extends State<LoginPage> {
                     Center(
                       child: Padding(
                         padding: EdgeInsets.only(top: 20),
-                        child: PageLink(
-                          links: [
-                            PageLinkInfo(
-                              transition: LinkTransition.Fade,
-                              ease: Curves.easeOut,
-                              duration: 0.3,
-                              pageBuilder: () => SignupPage(),
-                            ),
-                          ],
+                        child: GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => SignupPage(),
+                                ));
+                          },
                           child: Text.rich(
                             TextSpan(
                               style: TextStyle(

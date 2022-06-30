@@ -48,31 +48,28 @@ class Reservations extends StatelessWidget {
               child: Column(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.all(10.0),
+                    padding: const EdgeInsets.symmetric(horizontal: 20),
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
+                      // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Padding(
-                          padding: const EdgeInsets.only(left: 30),
-                          child: ClipRRect(
-                              borderRadius: BorderRadius.circular(26.0),
-                              child: Image.asset(
-                                "assets/images/image14.jpg",
-                                width: 180.0,
-                                height: sizeConfig!.height(0.16),
-                                fit: BoxFit.fill,
-                              )),
+                        ClipRRect(
+                            borderRadius: BorderRadius.circular(26.0),
+                            child: Image.asset(
+                              "assets/images/image14.jpg",
+                              width: 150.0,
+                              height: sizeConfig!.height(0.14),
+                              // fit: BoxFit.fill,
+                            )),
+                        SizedBox(
+                          width: 30,
                         ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 29),
-                          child: Text(
-                            'Reservation \nfor Restaurants',
-                            style: Theme.of(context)
-                                .textTheme
-                                .bodyText2!
-                                .copyWith(color: Colors.black),
-                            textAlign: TextAlign.left,
-                          ),
+                        Text(
+                          'Reservation \nfor Restaurants',
+                          style: Theme.of(context)
+                              .textTheme
+                              .bodyText2!
+                              .copyWith(color: Colors.black),
+                          textAlign: TextAlign.left,
                         ),
                       ],
                     ),
@@ -81,31 +78,28 @@ class Reservations extends StatelessWidget {
                     height: 20,
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(10.0),
+                    padding: const EdgeInsets.symmetric(horizontal: 20),
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
+                      // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Padding(
-                          padding: const EdgeInsets.only(left: 30),
-                          child: ClipRRect(
-                              borderRadius: BorderRadius.circular(26.0),
-                              child: Image.asset(
-                                "assets/images/image15.jpg",
-                                width: 180.0,
-                                height: sizeConfig!.height(0.16),
-                                fit: BoxFit.fill,
-                              )),
+                        ClipRRect(
+                            borderRadius: BorderRadius.circular(26.0),
+                            child: Image.asset(
+                              "assets/images/image15.jpg",
+                              width: 150.0,
+                              height: sizeConfig!.height(0.14),
+                              // fit: BoxFit.fill,
+                            )),
+                        SizedBox(
+                          width: 30,
                         ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 29),
-                          child: Text(
-                            'Call A Taxi',
-                            style: Theme.of(context)
-                                .textTheme
-                                .bodyText2!
-                                .copyWith(color: Colors.black),
-                            textAlign: TextAlign.left,
-                          ),
+                        Text(
+                          'Call A Taxi',
+                          style: Theme.of(context)
+                              .textTheme
+                              .bodyText2!
+                              .copyWith(color: Colors.black),
+                          textAlign: TextAlign.left,
                         ),
                       ],
                     ),
@@ -114,31 +108,28 @@ class Reservations extends StatelessWidget {
                     height: 20,
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(10.0),
+                    padding: const EdgeInsets.symmetric(horizontal: 20),
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
+                      // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Padding(
-                          padding: const EdgeInsets.only(left: 30),
-                          child: ClipRRect(
-                              borderRadius: BorderRadius.circular(26.0),
-                              child: Image.asset(
-                                "assets/images/image16.jpg",
-                                width: 180.0,
-                                height: sizeConfig!.height(0.16),
-                                fit: BoxFit.fill,
-                              )),
+                        ClipRRect(
+                            borderRadius: BorderRadius.circular(26.0),
+                            child: Image.asset(
+                              "assets/images/image16.jpg",
+                              width: 150.0,
+                              height: sizeConfig!.height(0.14),
+                              // fit: BoxFit.fill,
+                            )),
+                        SizedBox(
+                          width: 30,
                         ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 29),
-                          child: Text(
-                            'Booking A Spa',
-                            style: Theme.of(context)
-                                .textTheme
-                                .bodyText2!
-                                .copyWith(color: Colors.black),
-                            textAlign: TextAlign.left,
-                          ),
+                        Text(
+                          'Booking A Spa',
+                          style: Theme.of(context)
+                              .textTheme
+                              .bodyText2!
+                              .copyWith(color: Colors.black),
+                          textAlign: TextAlign.start,
                         ),
                       ],
                     ),

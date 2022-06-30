@@ -277,87 +277,87 @@ class Dashboard extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        // type: BottomNavigationBarType.fixed,
-        // selectedItemColor: Colors.black,
-        // selectedLabelStyle:
-        //     TextStyle(fontWeight: FontWeight.bold, fontSize: text * 15),
+      // bottomNavigationBar: BottomNavigationBar(
+      //   // type: BottomNavigationBarType.fixed,
+      //   // selectedItemColor: Colors.black,
+      //   // selectedLabelStyle:
+      //   //     TextStyle(fontWeight: FontWeight.bold, fontSize: text * 15),
 
-        // unselectedItemColor: Colors.black,
-        // iconSize: 30,
+      //   // unselectedItemColor: Colors.black,
+      //   // iconSize: 30,
 
-        // elevation: 5,
-        items: [
-          BottomNavigationBarItem(
-            icon: InkWell(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => Dashboard()),
-                  );
-                },
-                child: Icon(Icons.home)),
-            label: ('Dashboard'),
-            backgroundColor: Colors.white,
-          ),
-          BottomNavigationBarItem(
-              icon: InkWell(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => QuickServices()),
-                  );
-                },
-                child: Icon(
-                  Icons.room_service_outlined,
-                  color: Colors.black,
-                ),
-              ),
-              label: ('Service'),
-              backgroundColor: Colors.white),
-          BottomNavigationBarItem(
-            icon: InkWell(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => QuickServices()),
-                );
-              },
-              child: Icon(
-                Icons.message,
-                color: Colors.black,
-              ),
-            ),
-            label: ('Message'),
-            backgroundColor: Colors.white,
-          ),
-          BottomNavigationBarItem(
-            icon: InkWell(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Profile()),
-                );
-              },
-              child: Icon(
-                Icons.person,
-                color: Colors.black,
-              ),
-            ),
-            label: ('Profile'),
-            backgroundColor: Colors.white,
-          ),
-        ],
-        type: BottomNavigationBarType.fixed,
-        selectedItemColor: Colors.black,
-        selectedLabelStyle:
-            TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
-        backgroundColor: const Color(0xffA67B5B),
-        unselectedItemColor: Colors.black,
-        iconSize: 30,
+      //   // elevation: 5,
+      //   items: [
+      //     BottomNavigationBarItem(
+      //       icon: InkWell(
+      //           onTap: () {
+      //             Navigator.push(
+      //               context,
+      //               MaterialPageRoute(builder: (context) => Dashboard()),
+      //             );
+      //           },
+      //           child: Icon(Icons.home)),
+      //       label: ('Dashboard'),
+      //       backgroundColor: Colors.white,
+      //     ),
+      //     BottomNavigationBarItem(
+      //         icon: InkWell(
+      //           onTap: () {
+      //             Navigator.push(
+      //               context,
+      //               MaterialPageRoute(builder: (context) => QuickServices()),
+      //             );
+      //           },
+      //           child: Icon(
+      //             Icons.room_service_outlined,
+      //             color: Colors.black,
+      //           ),
+      //         ),
+      //         label: ('Service'),
+      //         backgroundColor: Colors.white),
+      //     BottomNavigationBarItem(
+      //       icon: InkWell(
+      //         onTap: () {
+      //           Navigator.push(
+      //             context,
+      //             MaterialPageRoute(builder: (context) => QuickServices()),
+      //           );
+      //         },
+      //         child: Icon(
+      //           Icons.message,
+      //           color: Colors.black,
+      //         ),
+      //       ),
+      //       label: ('Message'),
+      //       backgroundColor: Colors.white,
+      //     ),
+      //     BottomNavigationBarItem(
+      //       icon: InkWell(
+      //         onTap: () {
+      //           Navigator.push(
+      //             context,
+      //             MaterialPageRoute(builder: (context) => Profile()),
+      //           );
+      //         },
+      //         child: Icon(
+      //           Icons.person,
+      //           color: Colors.black,
+      //         ),
+      //       ),
+      //       label: ('Profile'),
+      //       backgroundColor: Colors.white,
+      //     ),
+      //   ],
+      //   type: BottomNavigationBarType.fixed,
+      //   selectedItemColor: Colors.black,
+      //   selectedLabelStyle:
+      //       TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+      //   backgroundColor: const Color(0xffA67B5B),
+      //   unselectedItemColor: Colors.black,
+      //   iconSize: 30,
 
-        elevation: 5,
-      ),
+      //   elevation: 5,
+      // ),
     );
   }
 }

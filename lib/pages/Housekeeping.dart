@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 import 'package:login/pages/QuickServices.dart';
 import 'package:login/widgets/back_button.dart';
+import 'package:login/widgets/bottom_bar.dart';
 import 'package:login/widgets/button.dart';
 import './StaffHelp.dart';
 import 'package:adobe_xd/page_link.dart';
@@ -35,7 +36,7 @@ class Housekeeping extends StatelessWidget {
                           onPressed: () => Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => StaffHelp(),
+                                builder: (context) => BottomBar(),
                               )))),
                   Padding(
                     padding: const EdgeInsets.only(right: 20),

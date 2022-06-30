@@ -200,16 +200,15 @@ class Menu2 extends StatelessWidget {
                                         children: [
                                           Padding(
                                             padding: const EdgeInsets.all(12.0),
-                                            child: PageLink(
-                                              links: [
-                                                PageLinkInfo(
-                                                  transition:
-                                                      LinkTransition.Fade,
-                                                  ease: Curves.easeOut,
-                                                  duration: 0.3,
-                                                  pageBuilder: () => Menu2(),
-                                                ),
-                                              ],
+                                            child: GestureDetector(
+                                              onTap: () {
+                                                Navigator.push(
+                                                    context,
+                                                    MaterialPageRoute(
+                                                      builder: (context) =>
+                                                          Menu2(),
+                                                    ));
+                                              },
                                               child: Container(
                                                 width: 160,
                                                 height:

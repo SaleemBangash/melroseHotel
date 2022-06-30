@@ -6,6 +6,7 @@ import 'package:login/main.dart';
 // import 'package:login/main.dart';
 // import 'package:login/utils/app_theme.dart';
 import 'package:login/widgets/back_button.dart';
+import 'package:login/widgets/bottom_bar.dart';
 //import 'package:Profile.dart';
 import './Reservation.dart';
 import 'package:adobe_xd/page_link.dart';
@@ -61,7 +62,7 @@ class _QuickServicesState extends State<QuickServices> {
                                   onPressed: () => Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                          builder: (context) => Dashboard())),
+                                          builder: (context) => BottomBar())),
                                 )),
                             Padding(
                               padding: const EdgeInsets.only(right: 20),
@@ -126,17 +127,15 @@ class _QuickServicesState extends State<QuickServices> {
                                           ),
                                           child: Padding(
                                             padding: const EdgeInsets.all(8.0),
-                                            child: PageLink(
-                                              links: [
-                                                PageLinkInfo(
-                                                  transition:
-                                                      LinkTransition.Fade,
-                                                  ease: Curves.easeOut,
-                                                  duration: 0.3,
-                                                  pageBuilder: () =>
-                                                      StaffHelp(),
-                                                ),
-                                              ],
+                                            child: GestureDetector(
+                                              onTap: () {
+                                                Navigator.push(
+                                                    context,
+                                                    MaterialPageRoute(
+                                                      builder: (context) =>
+                                                          StaffHelp(),
+                                                    ));
+                                              },
                                               child: Image.asset(
                                                   "assets/images/cleaning.png"),
                                             ),
@@ -168,17 +167,15 @@ class _QuickServicesState extends State<QuickServices> {
                                           ),
                                           child: Padding(
                                             padding: const EdgeInsets.all(8.0),
-                                            child: PageLink(
-                                              links: [
-                                                PageLinkInfo(
-                                                  transition:
-                                                      LinkTransition.Fade,
-                                                  ease: Curves.easeOut,
-                                                  duration: 0.3,
-                                                  pageBuilder: () =>
-                                                      Reservation(),
-                                                ),
-                                              ],
+                                            child: GestureDetector(
+                                              onTap: () {
+                                                Navigator.push(
+                                                    context,
+                                                    MaterialPageRoute(
+                                                      builder: (context) =>
+                                                          Reservation(),
+                                                    ));
+                                              },
                                               child: Image.asset(
                                                   "assets/images/drink.png"),
                                             ),
@@ -210,17 +207,15 @@ class _QuickServicesState extends State<QuickServices> {
                                           ),
                                           child: Padding(
                                             padding: const EdgeInsets.all(8.0),
-                                            child: PageLink(
-                                              links: [
-                                                PageLinkInfo(
-                                                  transition:
-                                                      LinkTransition.Fade,
-                                                  ease: Curves.easeOut,
-                                                  duration: 0.3,
-                                                  pageBuilder: () =>
-                                                      StaffHelp(),
-                                                ),
-                                              ],
+                                            child: GestureDetector(
+                                              onTap: () {
+                                                Navigator.push(
+                                                    context,
+                                                    MaterialPageRoute(
+                                                      builder: (context) =>
+                                                          StaffHelp(),
+                                                    ));
+                                              },
                                               child: Image.asset(
                                                   "assets/images/book.png"),
                                             ),
@@ -249,93 +244,93 @@ class _QuickServicesState extends State<QuickServices> {
               ],
             ),
           ),
-        ),
-        bottomNavigationBar: BottomNavigationBar(
-          // height: MediaQuery.of(context).size.height / 0.1,
-          type: BottomNavigationBarType.fixed,
-          backgroundColor: const Color(0xffA67B5B),
-          selectedItemColor: Colors.black,
-          unselectedItemColor: Colors.black,
-          selectedLabelStyle:
-              TextStyle(fontWeight: FontWeight.bold, fontSize: text * 15),
-
-          iconSize: 30,
-          elevation: 5,
-          currentIndex: 1,
-          items: [
-            BottomNavigationBarItem(
-              icon: InkWell(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => Dashboard()),
-                    );
-                  },
-                  child: Icon(Icons.home)),
-              label: 'Dashboard',
-              backgroundColor: Colors.white,
-            ),
-            BottomNavigationBarItem(
-                icon: InkWell(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => QuickServices()),
-                    );
-                  },
-                  child: Icon(
-                    Icons.room_service_outlined,
-                    color: Colors.black,
-                  ),
-                ),
-                label: ('Service'),
-                backgroundColor: Colors.white),
-            BottomNavigationBarItem(
-              icon: InkWell(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => QuickServices()),
-                  );
-                },
-                child: Icon(
-                  Icons.message,
-                  color: Colors.black,
-                ),
-              ),
-              label: ('Message'),
-              backgroundColor: Colors.white,
-            ),
-            BottomNavigationBarItem(
-              icon: InkWell(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => Profile()),
-                  );
-                },
-                child: Icon(
-                  Icons.person,
-                  color: Colors.black,
-                ),
-              ),
-              label: ('Profile'),
-              backgroundColor: Colors.white,
-            ),
-          ],
-          // selectedIconTheme: IconThemeData(color: Colors.amberAccent, size: 40),
-          // selectedItemColor: Colors.amberAccent,
-          // // type: BottomNavigationBarType.shifting,
-          // // currentIndex: _selectedIndex,
-          // //selectedItemColor: Colors.black,
-          // unselectedIconTheme: IconThemeData(
-          //   color: Colors.deepOrangeAccent,
-          // )
-          // iconSize: 40,
-          // onTap: (value) => Dashboard(),
-          //   // elevation: 5
-          //),
         ));
+    // bottomNavigationBar: BottomNavigationBar(
+    //   // height: MediaQuery.of(context).size.height / 0.1,
+    //   type: BottomNavigationBarType.fixed,
+    //   backgroundColor: const Color(0xffA67B5B),
+    //   selectedItemColor: Colors.black,
+    //   unselectedItemColor: Colors.black,
+    //   selectedLabelStyle:
+    //       TextStyle(fontWeight: FontWeight.bold, fontSize: text * 15),
+
+    //   iconSize: 30,
+    //   elevation: 5,
+    //   currentIndex: 1,
+    //   items: [
+    //     BottomNavigationBarItem(
+    //       icon: InkWell(
+    //           onTap: () {
+    //             Navigator.push(
+    //               context,
+    //               MaterialPageRoute(builder: (context) => Dashboard()),
+    //             );
+    //           },
+    //           child: Icon(Icons.home)),
+    //       label: 'Dashboard',
+    //       backgroundColor: Colors.white,
+    //     ),
+    //     BottomNavigationBarItem(
+    //         icon: InkWell(
+    //           onTap: () {
+    //             Navigator.push(
+    //               context,
+    //               MaterialPageRoute(builder: (context) => QuickServices()),
+    //             );
+    //           },
+    //           child: Icon(
+    //             Icons.room_service_outlined,
+    //             color: Colors.black,
+    //           ),
+    //         ),
+    //         label: ('Service'),
+    //         backgroundColor: Colors.white),
+    //     BottomNavigationBarItem(
+    //       icon: InkWell(
+    //         onTap: () {
+    //           Navigator.push(
+    //             context,
+    //             MaterialPageRoute(builder: (context) => QuickServices()),
+    //           );
+    //         },
+    //         child: Icon(
+    //           Icons.message,
+    //           color: Colors.black,
+    //         ),
+    //       ),
+    //       label: ('Message'),
+    //       backgroundColor: Colors.white,
+    //     ),
+    //     BottomNavigationBarItem(
+    //       icon: InkWell(
+    //         onTap: () {
+    //           Navigator.push(
+    //             context,
+    //             MaterialPageRoute(builder: (context) => Profile()),
+    //           );
+    //         },
+    //         child: Icon(
+    //           Icons.person,
+    //           color: Colors.black,
+    //         ),
+    //       ),
+    //       label: ('Profile'),
+    //       backgroundColor: Colors.white,
+    //     ),
+    //   ],
+    //   // selectedIconTheme: IconThemeData(color: Colors.amberAccent, size: 40),
+    //   // selectedItemColor: Colors.amberAccent,
+    //   // // type: BottomNavigationBarType.shifting,
+    //   // // currentIndex: _selectedIndex,
+    //   // //selectedItemColor: Colors.black,
+    //   // unselectedIconTheme: IconThemeData(
+    //   //   color: Colors.deepOrangeAccent,
+    //   // )
+    //   // iconSize: 40,
+    //   // onTap: (value) => Dashboard(),
+    //   //   // elevation: 5
+    //   //),
+    // ));
   }
 }
 

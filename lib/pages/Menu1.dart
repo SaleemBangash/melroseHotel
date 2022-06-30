@@ -126,15 +126,15 @@ class Menu1 extends StatelessWidget {
                                   ),
                                   child: Padding(
                                     padding: const EdgeInsets.all(8.0),
-                                    child: PageLink(
-                                      links: [
-                                        PageLinkInfo(
-                                          transition: LinkTransition.Fade,
-                                          ease: Curves.easeOut,
-                                          duration: 0.3,
-                                          pageBuilder: () => Reservation(),
-                                        ),
-                                      ],
+                                    child: GestureDetector(
+                                      onTap: () {
+                                        Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (context) =>
+                                                  Reservation(),
+                                            ));
+                                      },
                                       child:
                                           Image.asset("assets/images/dish.png"),
                                     ),
@@ -165,15 +165,15 @@ class Menu1 extends StatelessWidget {
                                   ),
                                   child: Padding(
                                     padding: const EdgeInsets.all(8.0),
-                                    child: PageLink(
-                                      links: [
-                                        PageLinkInfo(
-                                          transition: LinkTransition.Fade,
-                                          ease: Curves.easeOut,
-                                          duration: 0.3,
-                                          pageBuilder: () => Reservation(),
-                                        ),
-                                      ],
+                                    child: GestureDetector(
+                                      onTap: () {
+                                        Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (context) =>
+                                                  Reservation(),
+                                            ));
+                                      },
                                       child:
                                           Image.asset("assets/images/soup.png"),
                                     ),
@@ -204,15 +204,15 @@ class Menu1 extends StatelessWidget {
                                   ),
                                   child: Padding(
                                     padding: const EdgeInsets.all(8.0),
-                                    child: PageLink(
-                                      links: [
-                                        PageLinkInfo(
-                                          transition: LinkTransition.Fade,
-                                          ease: Curves.easeOut,
-                                          duration: 0.3,
-                                          pageBuilder: () => Reservation(),
-                                        ),
-                                      ],
+                                    child: GestureDetector(
+                                      onTap: () {
+                                        Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (context) =>
+                                                  Reservation(),
+                                            ));
+                                      },
                                       child: Image.asset(
                                           "assets/images/dish1.png"),
                                     ),
@@ -243,15 +243,15 @@ class Menu1 extends StatelessWidget {
                                   ),
                                   child: Padding(
                                     padding: const EdgeInsets.all(8.0),
-                                    child: PageLink(
-                                      links: [
-                                        PageLinkInfo(
-                                          transition: LinkTransition.Fade,
-                                          ease: Curves.easeOut,
-                                          duration: 0.3,
-                                          pageBuilder: () => Reservation(),
-                                        ),
-                                      ],
+                                    child: GestureDetector(
+                                      onTap: () {
+                                        Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (context) =>
+                                                  Reservation(),
+                                            ));
+                                      },
                                       child: Image.asset(
                                           "assets/images/dish2.png"),
                                     ),
@@ -284,15 +284,15 @@ class Menu1 extends StatelessWidget {
                                     ),
                                     child: Padding(
                                       padding: const EdgeInsets.all(8.0),
-                                      child: PageLink(
-                                        links: [
-                                          PageLinkInfo(
-                                            transition: LinkTransition.Fade,
-                                            ease: Curves.easeOut,
-                                            duration: 0.3,
-                                            pageBuilder: () => Reservation(),
-                                          ),
-                                        ],
+                                      child: GestureDetector(
+                                        onTap: () {
+                                          Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                builder: (context) =>
+                                                    Reservation(),
+                                              ));
+                                        },
                                         child: Image.asset(
                                             "assets/images/dish3.png"),
                                       ),
@@ -335,15 +335,14 @@ class Menu1 extends StatelessWidget {
                           children: [
                             ClipRRect(
                               borderRadius: BorderRadius.circular(46.0),
-                              child: PageLink(
-                                links: [
-                                  PageLinkInfo(
-                                    transition: LinkTransition.Fade,
-                                    ease: Curves.easeOut,
-                                    duration: 0.3,
-                                    pageBuilder: () => Menu2(),
-                                  ),
-                                ],
+                              child: GestureDetector(
+                                onTap: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => Menu2(),
+                                      ));
+                                },
                                 child: Image.asset(
                                   "assets/images/image8.jpg",
                                   width: 150.0,

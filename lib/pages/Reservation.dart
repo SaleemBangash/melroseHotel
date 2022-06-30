@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 import 'package:login/widgets/back_button.dart';
+import 'package:login/widgets/bottom_bar.dart';
 import '../main.dart';
 import './Menu1.dart';
 import 'package:adobe_xd/page_link.dart';
@@ -30,7 +31,7 @@ class Reservation extends StatelessWidget {
                     onPressed: () => Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => QuickServices(),
+                          builder: (context) => BottomBar(),
                         )))),
 
             // Padding(
@@ -69,15 +70,14 @@ class Reservation extends StatelessWidget {
               child: Center(
                 child: Column(
                   children: [
-                    PageLink(
-                      links: [
-                        PageLinkInfo(
-                          transition: LinkTransition.Fade,
-                          ease: Curves.easeOut,
-                          duration: 0.3,
-                          pageBuilder: () => Menu1(),
-                        ),
-                      ],
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => Menu1(),
+                            ));
+                      },
                       child: Container(
                         width: 200,
                         height: sizeConfig!.height(0.06),
@@ -101,15 +101,14 @@ class Reservation extends StatelessWidget {
                     SizedBox(
                       height: 20,
                     ),
-                    PageLink(
-                      links: [
-                        PageLinkInfo(
-                          transition: LinkTransition.Fade,
-                          ease: Curves.easeOut,
-                          duration: 0.3,
-                          pageBuilder: () => Reservations(),
-                        ),
-                      ],
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => Reservations(),
+                            ));
+                      },
                       child: Container(
                         width: 200,
                         height: sizeConfig!.height(0.06),
@@ -133,15 +132,14 @@ class Reservation extends StatelessWidget {
                     SizedBox(
                       height: 20,
                     ),
-                    PageLink(
-                      links: [
-                        PageLinkInfo(
-                          transition: LinkTransition.Fade,
-                          ease: Curves.easeOut,
-                          duration: 0.3,
-                          pageBuilder: () => RideBooking(),
-                        ),
-                      ],
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => RideBooking(),
+                            ));
+                      },
                       child: Container(
                         width: 200,
                         height: sizeConfig!.height(0.06),

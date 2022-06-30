@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 import 'package:login/widgets/back_button.dart';
+import '../widgets/bottom_bar.dart';
 import './Profile.dart';
 import 'package:adobe_xd/page_link.dart';
 import './Invoice2.dart';
@@ -27,7 +28,7 @@ class Invoice extends StatelessWidget {
                     onPressed: () => Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => Invoice2(),
+                          builder: (context) => BottomBar(),
                         )))),
             Padding(
               padding: const EdgeInsets.only(top: 20),

@@ -7,6 +7,7 @@ import 'package:login/pages/RoomBooking.dart';
 import 'package:login/widgets/back_button.dart';
 import 'package:login/widgets/button.dart';
 import 'package:login/widgets/text_field.dart';
+import '../widgets/bottom_bar.dart';
 import './Dashboard.dart';
 import 'package:adobe_xd/page_link.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -413,15 +414,14 @@ class _RoomBooking2State extends State<RoomBooking2> {
                         SizedBox(
                           height: 20,
                         ),
-                        PageLink(
-                          links: [
-                            PageLinkInfo(
-                              transition: LinkTransition.Fade,
-                              ease: Curves.easeOut,
-                              duration: 0.3,
-                              pageBuilder: () => RoomBooking(),
-                            ),
-                          ],
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => RoomBooking(),
+                                ));
+                          },
                           child: Container(
                             width: 260,
                             height: 50,
@@ -457,7 +457,7 @@ class _RoomBooking2State extends State<RoomBooking2> {
                       child: MyButton(
                         title: "Submit",
                         onPressed: () => Navigator.push(context,
-                            MaterialPageRoute(builder: (_) => QuickServices())),
+                            MaterialPageRoute(builder: (_) => BottomBar())),
                       ),
                     )),
               ],

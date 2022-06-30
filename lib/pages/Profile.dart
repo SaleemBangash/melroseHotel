@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:login/pages/Invoice.dart';
 import 'package:login/pages/QuickServices.dart';
 import 'package:login/widgets/back_button.dart';
+import 'package:login/widgets/bottom_bar.dart';
 import 'package:login/widgets/button.dart';
 
 import 'package:adobe_xd/page_link.dart';
@@ -31,7 +32,7 @@ class Profile extends StatelessWidget {
                 padding: const EdgeInsets.only(left: 20),
                 child: NewButton(
                   onPressed: () => Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => QuickServices())),
+                      MaterialPageRoute(builder: (context) => BottomBar())),
                 )),
             Padding(
               padding: const EdgeInsets.only(),
@@ -87,103 +88,67 @@ class Profile extends StatelessWidget {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.all(12.0),
-                      child: PageLink(
-                        links: [
-                          PageLinkInfo(
-                            transition: LinkTransition.Fade,
-                            ease: Curves.easeOut,
-                            duration: 0.3,
-                            pageBuilder: () => Profile(),
-                          ),
-                        ],
-                        child: Container(
-                          width: 200,
-                          height: sizeConfig!.height(0.06),
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20.0),
-                            border: Border.all(width: 1),
-                            color: Theme.of(context).primaryColor,
-                          ),
-                          child: Center(
-                            child: Text(
-                              'Room No 10',
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .bodyText2!
-                                  .copyWith(
-                                    color: Colors.black,
-                                  ),
-                              textAlign: TextAlign.left,
-                            ),
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                        width: 200,
+                        height: sizeConfig!.height(0.06),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20.0),
+                          border: Border.all(width: 1),
+                          color: Theme.of(context).primaryColor,
+                        ),
+                        child: Center(
+                          child: Text(
+                            'Room No 10',
+                            style:
+                                Theme.of(context).textTheme.bodyText2!.copyWith(
+                                      color: Colors.black,
+                                    ),
+                            textAlign: TextAlign.left,
                           ),
                         ),
                       ),
                     ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: PageLink(
-                        links: [
-                          PageLinkInfo(
-                            transition: LinkTransition.Fade,
-                            ease: Curves.easeOut,
-                            duration: 0.3,
-                            pageBuilder: () => Profile(),
-                          ),
-                        ],
-                        child: Container(
-                          width: 200,
-                          height: sizeConfig!.height(0.06),
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(25.0),
-                            border: Border.all(width: 1),
-                            color: Theme.of(context).primaryColor,
-                          ),
-                          child: Center(
-                            child: Text(
-                              'First Floor',
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .bodyText2!
-                                  .copyWith(
-                                    color: Colors.black,
-                                  ),
-                              textAlign: TextAlign.left,
-                            ),
+                      child: Container(
+                        width: 200,
+                        height: sizeConfig!.height(0.06),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(25.0),
+                          border: Border.all(width: 1),
+                          color: Theme.of(context).primaryColor,
+                        ),
+                        child: Center(
+                          child: Text(
+                            'First Floor',
+                            style:
+                                Theme.of(context).textTheme.bodyText2!.copyWith(
+                                      color: Colors.black,
+                                    ),
+                            textAlign: TextAlign.left,
                           ),
                         ),
                       ),
                     ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: PageLink(
-                        links: [
-                          PageLinkInfo(
-                            transition: LinkTransition.Fade,
-                            ease: Curves.easeOut,
-                            duration: 0.3,
-                            pageBuilder: () => Profile(),
-                          ),
-                        ],
-                        child: Container(
-                          width: 200,
-                          height: sizeConfig!.height(0.06),
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(25.0),
-                            border: Border.all(width: 1),
-                            color: Theme.of(context).primaryColor,
-                          ),
-                          child: Center(
-                            child: Text(
-                              'Double Bed',
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .bodyText2!
-                                  .copyWith(
-                                    color: Colors.black,
-                                  ),
-                              textAlign: TextAlign.left,
-                            ),
+                      child: Container(
+                        width: 200,
+                        height: sizeConfig!.height(0.06),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(25.0),
+                          border: Border.all(width: 1),
+                          color: Theme.of(context).primaryColor,
+                        ),
+                        child: Center(
+                          child: Text(
+                            'Double Bed',
+                            style:
+                                Theme.of(context).textTheme.bodyText2!.copyWith(
+                                      color: Colors.black,
+                                    ),
+                            textAlign: TextAlign.left,
                           ),
                         ),
                       ),

@@ -70,15 +70,14 @@ class RideBooking extends StatelessWidget {
                         Icons.place_outlined,
                         size: 25,
                       ),
-                      PageLink(
-                        links: [
-                          PageLinkInfo(
-                            transition: LinkTransition.Fade,
-                            ease: Curves.easeOut,
-                            duration: 0.3,
-                            pageBuilder: () => RecreationalPlaces(),
-                          ),
-                        ],
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => RecreationalPlaces(),
+                              ));
+                        },
                         child: Container(
                           width: 200,
                           height: sizeConfig!.height(0.06),
@@ -112,15 +111,14 @@ class RideBooking extends StatelessWidget {
                           Icons.place_outlined,
                           size: 25,
                         ),
-                        PageLink(
-                          links: [
-                            PageLinkInfo(
-                              transition: LinkTransition.Fade,
-                              ease: Curves.easeOut,
-                              duration: 0.3,
-                              pageBuilder: () => Reservations(),
-                            ),
-                          ],
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => Reservations(),
+                                ));
+                          },
                           child: Container(
                             width: 200,
                             height: sizeConfig!.height(0.06),
@@ -155,15 +153,14 @@ class RideBooking extends StatelessWidget {
                           Icons.place_outlined,
                           size: 25,
                         ),
-                        PageLink(
-                          links: [
-                            PageLinkInfo(
-                              transition: LinkTransition.Fade,
-                              ease: Curves.easeOut,
-                              duration: 0.3,
-                              pageBuilder: () => RideBooking(),
-                            ),
-                          ],
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => RideBooking(),
+                                ));
+                          },
                           child: Container(
                             width: 200,
                             height: sizeConfig!.height(0.06),
@@ -194,19 +191,18 @@ class RideBooking extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Icon(
-                          Icons.place_outlined,
-                          size: 25,
-                        ),
-                        PageLink(
-                          links: [
-                            PageLinkInfo(
-                              transition: LinkTransition.Fade,
-                              ease: Curves.easeOut,
-                              duration: 0.3,
-                              pageBuilder: () => RideBooking(),
-                            ),
-                          ],
+                        // Icon(
+                        //   Icons.place_outlined,
+                        //   size: 25,
+                        // ),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => RideBooking(),
+                                ));
+                          },
                           child: Container(
                             width: 200,
                             height: sizeConfig!.height(0.06),
